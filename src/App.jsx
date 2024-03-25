@@ -7,6 +7,11 @@ function App() {
   useEffect(() => {
     alanBtn({
       key: alanKey,
+      onCommand: ({ command, news }) => {
+        if (command === "newHeadLines") {
+          console.log(news);
+        }
+      },
     });
   }, []);
   return (
